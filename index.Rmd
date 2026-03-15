@@ -1,0 +1,17 @@
+---
+title: "Akpeiil Shaker"
+links:
+  - label: GV300 Showcase
+    url: "gv300.html"
+site: distill::distill_website
+output:
+  postcards::jolla
+---
+
+I am a final year student at University of Essex studying Politics and Economics My academic interests include electoral behaviour, political participation, and the use of data analysis to understand political systems.
+
+This website presents a showcase of my work from the GV300 course, where I analyse electoral participation in the United Kingdom using R and statistical visualisation.
+
+You can view my project here:
+
+[**GV300 Showcase**](gv300.html)

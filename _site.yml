@@ -1,0 +1,13 @@
+name: "Akpeii Shaker"
+title: "Akpeii Shaker"
+description: "GV300 personal website"
+output_dir: "."
+
+navbar:
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "GV300 Showcase"
+      href: gv300.html
+
+output: distill::distill_article
