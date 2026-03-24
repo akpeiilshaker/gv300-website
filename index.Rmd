@@ -7,11 +7,14 @@ site: distill::distill_website
 output:
   postcards::jolla
 ---
+<div style="text-align: center;">
+  <img src="yourphoto.jpg" width="200" style="border-radius: 50%;">
+</div>
 
-I am a final year student at University of Essex studying Politics and Economics My academic interests include electoral behaviour, political participation, and the use of data analysis to understand political systems.
+Hello! My name is Akpeiil and I am a final year student at University of Essex studying Politics and Economics.
 
 This website presents a showcase of my work from the GV300 course, where I analyse electoral participation in the United Kingdom using R and statistical visualisation.
 
 You can view my project here:
 
-[**GV300 Showcase**](gv300.html)
+[**GV300 Showcase**](GV300Showcase.html)

@@ -1,0 +1,27 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About this site",
+      "description": "Some additional details about the website",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2026-03-15T22:21:04+00:00"
+    },
+    {
+      "path": "gv300.html",
+      "title": "GV300 Showcase: Electoral Participation in the UK",
+      "author": [],
+      "contents": "\nIntroduction\nThis page showcases a piece of work from my GV300 assignment on electoral participation in the United Kingdom. The aim of the project was to explore whether all votes are equally represented and to analyse differences in constituency sizes and voter turnout across the UK. Using R and the tidyverse packages, I cleaned election data and created visualisations to better understand patterns in electoral participation.\nExample Code\nBelow is an example of the code used to clean and prepare the dataset for analysis.\n\n\nlibrary(tidyverse)\n\nuk_csv <- \"https://electionresults.parliament.uk/general-elections/6/candidacies.csv\"\nuk_raw <- readr::read_csv(uk_csv, show_col_types = FALSE)\n\nnames(uk_raw) <- names(uk_raw) %>% \n  tolower() %>% \n  str_replace_all(\"\\\\s+\", \"_\")\n\nuk1 <- uk_raw %>%\n  filter(!`election_is_by-election`)\n\nuk2 <- uk1 %>%\n  select(\n    constituency = constituency_name,\n    country = country_name,\n    valid_votes = candidate_vote_count,\n    electorate = electorate\n  )\n\n\n\n\nggplot(uk, aes(electorate)) +\n  geom_histogram(binwidth = 5000, color = \"white\") +\n  labs(\n    title = \"Distribution of Constituency Electorates in the UK\",\n    x = \"Electorate size\",\n    y = \"Number of constituencies\"\n  ) +\n  theme_minimal()\n\n\n\nExplanation\nThe code above loads election data from the UK Parliament dataset and prepares it for analysis. It removes by-elections, keeps only the key variables, combines candidate-level rows into constituency-level totals, and calculates turnout as a percentage of the electorate. This makes the dataset suitable for comparing constituency size and turnout across the UK.\nThe visualisation shows the distribution of electorate sizes across UK constituencies. Most constituencies are clustered around roughly 70,000 to 78,000 voters, but there are also some noticeably smaller and larger constituencies. This matters because each constituency elects one Member of Parliament regardless of its size, which means that votes may not carry exactly the same weight everywhere.\n\n\n\n",
+      "last_modified": "2026-03-15T22:21:05+00:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Akpeiil Shaker",
+      "author": [],
+      "contents": "\n\n          \n          \n          your-name-site\n          \n          \n          Home\n          About\n          ☰\n          \n          \n      \n        \n          \n            Akpeiil Shaker\n          \n          \n            \n              I am a final year student at University of Essex\n              studying Politics and Economics My academic interests\n              include electoral behaviour, political participation, and\n              the use of data analysis to understand political\n              systems.\n              This website presents a showcase of my work from the\n              GV300 course, where I analyse electoral participation in\n              the United Kingdom using R and statistical\n              visualisation.\n              You can view my project here:\n              GV300\n              Showcase\n            \n            \n              I am a final year student at University of Essex\n              studying Politics and Economics My academic interests\n              include electoral behaviour, political participation, and\n              the use of data analysis to understand political\n              systems.\n              This website presents a showcase of my work from the\n              GV300 course, where I analyse electoral participation in\n              the United Kingdom using R and statistical\n              visualisation.\n              You can view my project here:\n              GV300\n              Showcase\n            \n          \n\n          \n            \n              \n                  \n                    \n                      GV300 Showcase\n                    \n                  \n                \n                              \n          \n\n          \n            \n              \n                                \n                  \n                    GV300 Showcase\n                  \n                \n                              \n            \n          \n        \n      \n    \n\n    \n    \n    ",
+      "last_modified": "2026-03-15T22:21:06+00:00"
+    }
+  ],
+  "collections": []
+}

@@ -1,0 +1,23 @@
+---
+title: "Data Analysis Showcase"
+description: "A group of projects dedicated to the quantitative analysis of political data I did while studying module GOV300."
+output: distill::distill_article
+---
+
+## Projects
+
+### [Electoral Participation in the UK](project1.html)
+
+An analysis of UK constituency-level election data to examine turnout, electorate size, and inequalities in political representation.This project examines whether voters are equally represented across UK constituencies.
+
+### [Measuring Trust in the Central Bank](project2.html)
+
+A project on measurement, missing data, reliability, and scale construction using the Q37 survey battery.
+
+### [Who Isn’t Voting?](project3.html)
+
+Analysis of turnout inequality, non-voters, and participation pattern
+
+---
+
+[← Back to Home](index.html)

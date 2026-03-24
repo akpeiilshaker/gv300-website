@@ -1,0 +1,92 @@
+---
+title: "Electoral Participation in the UK"
+description: "An analysis of constituency size, turnout, and unequal representation in UK elections."
+output: distill::distill_article
+---
+
+
+## Overview
+
+For this GV300 assignment, I analysed constituency-level election data from the United Kingdom to examine differences in electorate size and voter turnout. The purpose of the project was to evaluate whether constituencies are evenly sized and what that means for democratic representation. This matters because each constituency elects one Member of Parliament, even when the number of voters varies substantially between places.
+
+## Data preparation
+
+The first stage of the project involved cleaning raw UK election data and transforming it into a constituency-level dataset suitable for analysis.
+
+<details>
+<summary><strong>Show code</strong></summary>
+
+```{r}
+library(tidyverse)
+
+uk_csv <- "https://electionresults.parliament.uk/general-elections/6/candidacies.csv"
+uk_raw <- readr::read_csv(uk_csv, show_col_types = FALSE)
+
+names(uk_raw) <- names(uk_raw) %>% 
+  tolower() %>% 
+  str_replace_all("\\s+", "_")
+
+uk1 <- uk_raw %>%
+  filter(!`election_is_by-election`)
+
+uk2 <- uk1 %>%
+  select(
+    constituency = constituency_name,
+    country = country_name,
+    valid_votes = candidate_vote_count,
+    electorate = electorate
+  )
+
+uk3 <- uk2 %>%
+  group_by(country, constituency) %>%
+  summarise(
+    valid_votes = sum(valid_votes, na.rm = TRUE),
+    electorate = max(electorate, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+uk <- uk3 %>%
+  mutate(turnout_registered = 100 * valid_votes / electorate) %>%
+  filter(is.finite(turnout_registered), electorate > 0)
+
+```
+</details>  
+
+## Visualisation
+```{r}
+ggplot(uk, aes(electorate)) +
+  geom_histogram(binwidth = 5000, color = "white", fill = "steelblue") +
+  labs(
+    title = "Distribution of Constituency Electorates in the UK",
+    subtitle = "Most constituencies cluster around the middle, but some are noticeably smaller or larger",
+    x = "Electorate size",
+    y = "Number of constituencies"
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title = element_text(face = "bold"),
+    plot.subtitle = element_text(size = 11)
+  )
+```  
+## Not even distribution
+The histogram shows that most UK constituencies are concentrated around a relatively similar electorate size, but the distribution is not perfectly even. Some constituencies are much smaller, while others are clearly larger. This matters politically because every constituency still elects one Member of Parliament, meaning that representation is not perfectly equal across places. Voters in smaller constituencies may therefore have more representational weight than those in larger ones.
+
+## Results of histogram analysis
+The spread of results also indicates that the size of the constituency is not random, but is determined by institutional and geographical factors. For example, in rural areas or less densely populated areas, the electorate is often smaller, while in cities it is usually larger. This leads to a structural imbalance in representation, which is embedded in the electoral system.
+
+Overall, the results suggest that although the UK electoral system strives to maintain equal representation, there is still significant inequality in practice. These differences highlight the importance of constituency boundaries and their structure for shaping political representation.
+
+## Key conclusion
+
+Despite the fact that the constituencies should be the same in size, there are still differences. These differences mean that representation in the UK is not completely equal, which raises important questions about the fairness and structure of electoral systems.
+
+
+## Source
+
+The full code and files for this project are available on GitHub:
+
+[View repository](https://github.com/akpeiilshaker/gv300-website)
+
+---
+
+[← Back to Projects](GV300Showcase.html)
