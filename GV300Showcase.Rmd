@@ -12,11 +12,11 @@ An analysis of UK constituency-level election data to examine turnout, electorat
 
 ### [Measuring Trust in the Central Bank](project2.html)
 
-A project on measurement, missing data, reliability, and scale construction using the Q37 survey battery.
+This project examines how trust in the central bank can be measured using survey data from the Q37 battery. It focuses on key issues in quantitative research, including missing data, reliability, and scale construction.
 
 ### [Who Isn’t Voting?](project3.html)
 
-Analysis of turnout inequality, non-voters, and participation pattern
+An analysis of a voter turnout across UK constituencies, with a particular focus on inequalities in political participation. By analysing patterns of turnout and non-voting, it highlights how variations in participation—especially across different social and geographic contexts—can shape electoral outcomes and raise important questions about representation in democratic systems.
 
 ---
 

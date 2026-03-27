@@ -11,10 +11,10 @@ output:
   <img src="yourphoto.jpg" width="200" style="border-radius: 50%;">
 </div>
 
-Hello! My name is Akpeiil and I am a final year student at University of Essex studying Politics and Economics.
+Hello! My name is Akpeiil and I am a final-year student at the University of Essex studying Politics and Economics.
+This website showcases my work from the GV300 course, where I explore political phenomena through quantitative analysis. Across these projects, I work with real-world data, apply statistical methods, and present findings in a clear and accessible way.
+The portfolio reflects not only the outcomes of my work, but also my progression in developing analytical skills and confidence in using quantitative tools to understand political behaviour.
 
-This website presents a showcase of my work from the GV300 course, where I analyse electoral participation in the United Kingdom using R and statistical visualisation.
-
-You can view my project here:
+You can view my projects here:
 
 [**GV300 Showcase**](GV300Showcase.html)

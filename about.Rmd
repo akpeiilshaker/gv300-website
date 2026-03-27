@@ -2,8 +2,8 @@
 title: "About this site"
 description: "Overview of my academic work and quantitative skills"
 ---
+Throughout my undergraduate studies, I have developed a strong interest in quantitative approaches to political science, which is reflected in the work collected on this website. Each project highlights different aspects of my ability to handle data, employ statistical techniques, and draw meaningful conclusions from empirical analysis. Rather than presenting isolated assignments, this collection traces my intellectual development, showing how my analytical skills and confidence with quantitative methods have evolved over time in the study of political science.
 
-This website features a collection of my undergraduate work, with a focus on quantitative analysis in political science. The projects presented here illustrate my ability to engage with data, apply statistical methods, and interpret empirical findings. Taken together, they reflect my progression in analytical thinking and my increasing confidence in using quantitative tools to explore political phenomena.
 ---
 
 ```{r setup, include=FALSE}
