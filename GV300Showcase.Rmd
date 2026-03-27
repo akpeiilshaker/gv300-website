@@ -16,7 +16,7 @@ This project examines how trust in the central bank can be measured using survey
 
 ### [Who Isn’t Voting?](project3.html)
 
-An analysis of a voter turnout across UK constituencies, with a particular focus on inequalities in political participation. By analysing patterns of turnout and non-voting, it highlights how variations in participation—especially across different social and geographic contexts—can shape electoral outcomes and raise important questions about representation in democratic systems.
+An analysis of a voter turnout across UK constituencies, with a particular focus on inequalities in political participation. By analysing patterns of turnout and non-voting, it highlights how variations in participation, especially across different social and geographic contexts—can shape electoral outcomes and raise important questions about representation in democratic systems.
 
 ---
 
