@@ -8,7 +8,7 @@ navbar:
     - text: "Home"
       href: index.html
     - text: "GV300 Showcase"
-      href: Gv300Showcase.html
+      href: GV300Showcase.html
     - text: "About"
       href: about.html
 
