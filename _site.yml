@@ -1,7 +1,7 @@
 name: "Akpeiil Shaker"
 title: "Akpeiil Shaker"
 description: "GV300 personal website"
-output_dir: "."
+output_dir: "docs"
 
 navbar:
   right:
