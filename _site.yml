@@ -1,14 +1,14 @@
-name: "Akpeii Shaker"
-title: "Akpeii Shaker"
+name: "Akpeiil Shaker"
+title: "Akpeiil Shaker"
 description: "GV300 personal website"
-output_dir: "."
+output_dir: "docs"
 
 navbar:
   right:
     - text: "Home"
       href: index.html
     - text: "GV300 Showcase"
-      href: Gv300Showcase.html
+      href: GV300Showcase.html
     - text: "About"
       href: about.html
 
